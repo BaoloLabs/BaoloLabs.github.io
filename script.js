@@ -7,7 +7,7 @@ async function getPorconi() {
     }
 
     const result = await response.json();
-    console.log(result);
+    // console.log(result);
   } catch (error) {
     console.error(error.message);
   }
@@ -15,7 +15,9 @@ async function getPorconi() {
 
 const data = getPorconi();
 
-console.log(`Random: ${data[Math.floor(Math.random() * data.length)]}`)
+const numero = Math.floor(Math.random() * data.length)
+
+console.log(`numero randomico: ${numero}`)
 
 const porconeElement = document.getElementById("porcone")
-porconeElement.innerHTML = data[Math.floor(Math.random() * data.length)]
+porconeElement.innerHTML = data[numero]
