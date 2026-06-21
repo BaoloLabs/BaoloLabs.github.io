@@ -1,6 +1,7 @@
 Benvenuto nel backend di BaaS (Bestemmia as a Service)! <br>
 Il servizio è operativo e funzionante
 <script>
-  const porconi = fetch("https://baololabs.github.io/lista.json")
-  console.log({porconi.json()})
+  const req = await fetch("https://baololabs.github.io/lista.json")
+  const porconi = await req.json()
+  console.log(porconi)
 </script>
