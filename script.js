@@ -14,7 +14,7 @@ async function getPorconi() {
   }
 }
 
-const data = getPorconi();
+const data = await getPorconi();
 
 const numero = Math.floor(Math.random() * data.length)
 
