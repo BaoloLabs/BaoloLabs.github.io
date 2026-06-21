@@ -15,7 +15,7 @@ async function getPorconi() {
 
 const data = getPorconi();
 
-console.log(getPorconi())
+console.log(`Random: ${data[Math.floor(Math.random() * data.length)]}`)
 
-const porconeElement = document.getElementById("porcone");
-porconeElement.innerHTML = data[Math.floor(Math.random() * data.length)];
+const porconeElement = document.getElementById("porcone")
+porconeElement.innerHTML = data[Math.floor(Math.random() * data.length)]
