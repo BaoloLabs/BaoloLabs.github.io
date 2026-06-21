@@ -1,24 +1,30 @@
 async function getPorconi() {
-  const url = "https://baololabs.github.io/lista.json"
-  try {
-    const response = await fetch(url)
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`)
-    }
+    const url = "https://baololabs.github.io/lista.json"
+    try {
+        const response = await fetch(url)
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`)
+        }
 
-    const result = await response.json()
-    return result
-    // console.log(result)
-  } catch (error) {
-    console.error(error.message)
-  }
+        const result = await response.json()
+
+        const numero = Math.floor(Math.random() * result.length)
+
+        console.log(`numero randomico: ${numero}`)
+
+        const porconeElement = document.getElementById("porcone")
+        porconeElement.innerHTML = result[numero]
+        // console.log(result)
+    } catch (error) {
+        console.error(error.message)
+    }
 }
 
-const data = await getPorconi();
+// const data = await getPorconi();
 
-const numero = Math.floor(Math.random() * data.length)
+// const numero = Math.floor(Math.random() * data.length)
 
-console.log(`numero randomico: ${numero}`)
+// console.log(`numero randomico: ${numero}`)
 
-const porconeElement = document.getElementById("porcone")
-porconeElement.innerHTML = data[numero]
+// const porconeElement = document.getElementById("porcone")
+// porconeElement.innerHTML = data[numero]
