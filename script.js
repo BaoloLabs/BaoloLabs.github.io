@@ -17,4 +17,5 @@ const data = getPorconi();
 
 console.log(getPorconi())
 
-document.getelementById("getPorconi").innerHTML = data[Math.floor(Math.random()*items.length)];
+const porconeElement = document.getElementById("porcone");
+porconeElement.innerHTML = data[Math.floor(Math.random() * data.length)];
