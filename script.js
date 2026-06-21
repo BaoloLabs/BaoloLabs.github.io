@@ -1,15 +1,16 @@
 async function getPorconi() {
-  const url = "https://baololabs.github.io/lista.json";
+  const url = "https://baololabs.github.io/lista.json"
   try {
-    const response = await fetch(url);
+    const response = await fetch(url)
     if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
+      throw new Error(`Response status: ${response.status}`)
     }
 
-    const result = await response.json();
-    // console.log(result);
+    const result = await response.json()
+    return result
+    // console.log(result)
   } catch (error) {
-    console.error(error.message);
+    console.error(error.message)
   }
 }
 
