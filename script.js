@@ -20,6 +20,8 @@ async function getPorconi() {
     }
 }
 
+getPorconi()
+
 // const data = await getPorconi();
 
 // const numero = Math.floor(Math.random() * data.length)
